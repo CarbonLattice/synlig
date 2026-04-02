@@ -8,7 +8,7 @@ env:
 
 jobs:
   tests-formal-verification:
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: ubuntu:jammy
     strategy:
       matrix:

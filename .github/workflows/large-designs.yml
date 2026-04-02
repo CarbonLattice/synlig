@@ -9,7 +9,7 @@ env:
 jobs:
   ibex_synth:
     name: Ibex (Vivado synthesis)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: ubuntu:jammy
     env:
       DEBIAN_FRONTEND: noninteractive
@@ -63,7 +63,7 @@ jobs:
 
   ibex_synth_f4pga:
     name: Ibex (F4PGA synthesis)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: ubuntu:jammy
     env:
       DEBIAN_FRONTEND: noninteractive
@@ -114,7 +114,7 @@ jobs:
 
   opentitan_9d82960888_synth:
     name: Opentitan 9d82960888 (synthesis)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     # vivado is linked with libraries used in this version of ubuntu
     container: ubuntu:jammy
     env:
@@ -198,7 +198,7 @@ jobs:
 
   opentitan_synth:
     name: Opentitan (synthesis)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     # vivado is linked with libraries used in this version of ubuntu
     container: ubuntu:jammy
     env:
@@ -254,7 +254,7 @@ jobs:
             **/plot_*.svg
 
   opentitan_parse_report:
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     # vivado is linked with libraries used in this version of ubuntu
     container: ubuntu:jammy
     strategy:
@@ -328,7 +328,7 @@ jobs:
 
   veer_synth:
     name: VeeR-EH1 (synthesis)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: ubuntu:jammy
     env:
       DEBIAN_FRONTEND: noninteractive
@@ -379,7 +379,7 @@ jobs:
 
   blackparrot_synth_xilinx:
     name: Black Parrot (AMD (Xilinx) FPGA synthesis)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: ubuntu:jammy
     env:
       DEBIAN_FRONTEND: noninteractive
@@ -433,7 +433,7 @@ jobs:
 
   blackparrot_synth_asic:
     name: Black Parrot (ASIC synthesis)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: ubuntu:jammy
     env:
       DEBIAN_FRONTEND: noninteractive
@@ -491,7 +491,7 @@ jobs:
 
   blackparrot_synth_xilinx_python:
     name: Black Parrot (AMD (Xilinx) with PySynlig)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: debian:bookworm
     env:
       DEBIAN_FRONTEND: noninteractive

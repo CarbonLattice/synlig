@@ -20,7 +20,7 @@ jobs:
   emit-workflow-info:
     name: Emit Workflow Info
     if: ${{ github.event_name == 'workflow_dispatch' }}
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: 'bitnami/git:2.40.1-debian-11-r4'
 
     steps:
@@ -31,7 +31,7 @@ jobs:
 
   style-check:
     name: Style check
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: bitnami/git:2.40.1-debian-11-r4
 
     steps:
@@ -104,7 +104,7 @@ jobs:
             build-binaries-args: 'install@surelog install@pysynlig PREFIX=out'
             submodules: 'third_party/yosys third_party/surelog third_party/pybind11'
     name: ${{ matrix.name }}
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: debian:bookworm
     env:
       CC: ${{ matrix.cc }}
@@ -196,7 +196,7 @@ jobs:
 
   build-tools:
     name: Build tools
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: debian:bookworm
     env:
       DEBIAN_FRONTEND: noninteractive
@@ -390,7 +390,7 @@ jobs:
 
   verify-README:
     name: Verify README Correctness (Installation From Sources)
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: debian:bookworm
     env:
       DEBIAN_FRONTEND: noninteractive
@@ -446,7 +446,7 @@ jobs:
   test-package:
     name: Verify README Correctness (Download And Run Release)
     needs: release
-    runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
+    runs-on: [self-hosted, Linux, X64]
     container: debian:bookworm
     env:
       DEBIAN_FRONTEND: noninteractive
