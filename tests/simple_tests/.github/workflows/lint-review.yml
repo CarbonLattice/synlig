@@ -9,7 +9,7 @@ jobs:
   lint_review:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: 'Download artifact'
         id: get-artifacts
         uses: actions/github-script@v3.1.0

@@ -24,7 +24,7 @@ jobs:
     container: 'bitnami/git:latest'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: false
           fetch-depth: 1
@@ -35,7 +35,7 @@ jobs:
     container: bitnami/git:latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -115,7 +115,7 @@ jobs:
       GHA_MACHINE_TYPE: "n2-highmem-8"
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: false
           fetch-depth: 1
@@ -203,7 +203,7 @@ jobs:
       GHA_MACHINE_TYPE: "n2-standard-4"
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: false
           fetch-depth: 1
@@ -322,7 +322,7 @@ jobs:
     if: ${{github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')}}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
          # Download complete repository + tags
          fetch-depth: 0
@@ -398,7 +398,7 @@ jobs:
 
     steps:
       - name: Prepare Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -454,7 +454,7 @@ jobs:
 
     steps:
       - name: Prepare Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 

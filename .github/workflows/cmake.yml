@@ -25,7 +25,7 @@ jobs:
     container: 'bitnami/git:latest'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: false
           fetch-depth: 1
@@ -36,7 +36,7 @@ jobs:
     container: bitnami/git:latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -68,7 +68,7 @@ jobs:
       GHA_MACHINE_TYPE: "n2-highmem-8"
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: false
           fetch-depth: 1
