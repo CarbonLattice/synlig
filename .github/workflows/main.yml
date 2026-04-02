@@ -21,7 +21,7 @@ jobs:
     name: Emit Workflow Info
     if: ${{ github.event_name == 'workflow_dispatch' }}
     runs-on: [self-hosted, Linux, X64]
-    container: 'bitnami/git:2.40.1-debian-11-r4'
+    container: 'bitnami/git:latest'
 
     steps:
       - uses: actions/checkout@v3
@@ -32,7 +32,7 @@ jobs:
   style-check:
     name: Style check
     runs-on: [self-hosted, Linux, X64]
-    container: bitnami/git:2.40.1-debian-11-r4
+    container: bitnami/git:latest
 
     steps:
       - uses: actions/checkout@v3
@@ -164,7 +164,7 @@ jobs:
               ;
 
       - name: Setup cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ env.CCACHE_DIR }}
           key: cache_${{ matrix.artifact-name }}_${{ github.run_id }}
